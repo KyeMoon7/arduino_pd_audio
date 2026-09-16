@@ -18,8 +18,9 @@ void loop()
     bouton.update();
 
     // La DEL suit l'état physique du bouton
-    if (bouton.pressed()) //le prof a demander de faire apparaitre 123 quand le bouton est appuyé (une fois) isPressed ferais en sorte que le 123 s'affiche tant que le bouton est appuyé, ce qui n'est pas le but.
+    if (bouton.pressed()) //le prof a demander de faire apparaitre 123 quand le bouton est appuyé (une fois) isPressed ferais en sorte que le 123 s'affiche tant que le bouton est appuyé, ce qui n'est pas le but. ne pas oublier de fermer le terminal si on utilise pdchoco
     {
-        Serial.println(123);
+        Serial.print("bouton0 ");  // Envoie le descripteur et son espace en un seul bloc, si on veux faire un espace entre le descripteur et la valeur, on peut faire Serial.print("bouton0"); Serial.print(" "); Serial.print(1); Serial.println();
+        Serial.println(1); // Envoie la valeur et ajoute automatiquement le saut de ligne final
     }
 }
