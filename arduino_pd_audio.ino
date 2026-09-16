@@ -18,7 +18,7 @@ void loop()
     bouton.update();
 
     // La DEL suit l'état physique du bouton
-    if (bouton.isPressed())
+    if (bouton.pressed())
     {
         Serial.println(123);
     }
