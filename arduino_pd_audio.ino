@@ -1,11 +1,25 @@
 // Le code minimal
+#include <Arduino.h>
 
-#include <Arduino.h> 
+#include <Bounce2.h>
 
-void setup() {
-  Serial.begin(115200);
+#define BROCHE_BOUTON 2
+
+Bounce2::Button bouton = Bounce2::Button();
+
+void setup()
+{
+    bouton.attach(BROCHE_BOUTON, INPUT_PULLUP);
+    bouton.setPressedState(LOW);
 }
 
-void loop() {
- Serial.println(123);
+void loop()
+{
+    bouton.update();
+
+    // La DEL suit l'état physique du bouton
+    if (bouton.isPressed())
+    {
+        Serial.println(123);
+    }
 }
