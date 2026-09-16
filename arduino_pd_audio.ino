@@ -3,6 +3,7 @@
 
 #include <Bounce2.h>
 
+// #define BROCHE_BOUTON 2 permet d'écrire BROCHE_BOUTON à la place de 2 dans le code.
 
 Bounce2::Button bouton = Bounce2::Button();
 
