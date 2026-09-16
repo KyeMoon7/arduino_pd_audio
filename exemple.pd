@@ -1,9 +1,9 @@
-#N canvas 1204 253 450 300 12;
+#N canvas 1604 262 450 300 12;
 #X msg 80 50 devices;
 #X obj 58 154 comport;
 #X obj 59 205 print;
-#X msg 102 83 baud 115200 \, close \, open 8;
 #X msg 155 125 close;
+#X msg 102 83 close \, open 8 \, baud 115200 \, dtr 1;
 #X connect 0 0 1 0;
 #X connect 1 0 2 0;
 #X connect 3 0 1 0;
